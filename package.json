@@ -1,0 +1,30 @@
+{
+  "name": "korone-bot",
+  "version": "1.0.0",
+  "description": "A discord bot! Woof woof!",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/.bin/nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hafizhrf/korone-bot.git"
+  },
+  "keywords": [],
+  "author": "pizh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hafizhrf/korone-bot/issues"
+  },
+  "homepage": "https://github.com/hafizhrf/korone-bot#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "discord.js": "^12.1.1",
+    "dotenv": "^8.2.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
