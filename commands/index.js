@@ -1,4 +1,6 @@
 
 module.exports = {
- Woof: require('./youtube'),
+ Woof: require('./woof'),
+ Youtube: require('./youtube'),
+ Confess: require('./confess'),
 };
