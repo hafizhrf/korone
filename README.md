@@ -2,5 +2,16 @@
 A discord bot built with node.js... WOOF WOOF!
 
 ## Command Lists
+ 
 ###### `k!woof`
-- Woofing to someone
+Menggongong...
+###### `k!youtube`
+Menampilkan statistik channel youtube
+###### `k!confess`
+Nembak...
+###### `k!anime`
+Menampilkan statistik anime
+###### `k!seiyuu`
+Menampilkan Seiyuu
+###### `k!manga`
+Menampilkan statistik manga
