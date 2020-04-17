@@ -2,6 +2,8 @@ require('dotenv').config();
 const Discord = require('discord.js');
 const botCommands = require('./commands');
 const bot = new Discord.Client();
+var express = require('express');
+var app = express();
 
 bot.commands = new Discord.Collection();
 Object.keys(botCommands).map(key => {
@@ -39,4 +41,9 @@ bot.on('message', msg => {
     console.error(error);
     msg.reply('there was an error trying to execute that command!');
   }
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
 });
