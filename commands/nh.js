@@ -35,7 +35,7 @@ const getDoujin = (id, msg) => {
     })
     msg.channel.send({embed:embed})
   }).catch(err => {
-    msg.channel.send('Doujin tidak ditemukan');
+    msg.channel.send('Doujin r18 tidak ditemukan');
   })
 }
 
@@ -58,7 +58,7 @@ module.exports = {
           api.search(args.join(' ')).then(res => {
             getDoujin(res.results[0].id, msg)
           }).catch(err => {
-            msg.channel.send('Doujin tidak ditemukan');
+            msg.channel.send('Doujin r18 tidak ditemukan');
           })
         }
       }
