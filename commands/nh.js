@@ -13,21 +13,43 @@ module.exports = {
       if (args.join(' ').length == 6 && !isNaN(args.join(' '))) {
         console.log(args.join(' '));
         api.g(args.join(' ')).then(gallery => {
-          const embed = new MessageEmbed()
-          .setColor(0xff0000)
-          .setAuthor(gallery.title.english , gallery.getCover())
-          .setFooter("Copyright Nhentai")
-          msg.channel.send(embed)
+          const embed = {
+            color: 6101172,
+            footer: {
+              text: "Copyright nhentai.net"
+            },
+            image: {
+              url: gallery.getCover()
+            },
+            author: {
+              name: gallery.title.english,
+              url: `https://nhentai.net/g/${args.join(' ')}`,
+            }
+          }
+          msg.channel.send({embed:embed})
         }).catch(err => {
           msg.channel.send('Doujin tidak ditemukan');
         })
       }else{
         api.search(args.join(' ')).then(res => {
-          const embed = new MessageEmbed()
-          .setColor(0xff0000)
-          .setAuthor(res.results[0].title , res.results[0].thumbnail.s)
-          .setFooter("Copyright Nhentai")
-          msg.channel.send(embed)
+          api.g(res.results[0].id).then(gallery => {
+            const embed = {
+              color: 6101172,
+              footer: {
+                text: "Copyright nhentai.net"
+              },
+              image: {
+                url: gallery.getCover()
+              },
+              author: {
+                name: gallery.title.english,
+                url: `https://nhentai.net/g/${res.results[0].id}`,
+              }
+            }
+            msg.channel.send({embed:embed})
+          }).catch(err => {
+            msg.channel.send('Doujin tidak ditemukan');
+          })
         }).catch(err => {
           msg.channel.send('Doujin tidak ditemukan');
         })
