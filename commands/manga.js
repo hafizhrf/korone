@@ -3,7 +3,7 @@ const axios = require('axios')
 const { MessageEmbed } = require('discord.js');
 const formatNumber = require('../helpers/numbering');
 
-const manga = {
+module.exports = {
   name: 'k!manga',
   description: 'Menampilkan statistik manga',
   execute(msg, args) {
@@ -35,5 +35,3 @@ const manga = {
     }
   },
 };
-
-export default manga;

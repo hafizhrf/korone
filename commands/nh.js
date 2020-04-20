@@ -39,7 +39,7 @@ const getDoujin = (id, msg) => {
   })
 }
 
-const nh = {
+module.exports = {
   name: 'k!nh',
   description: 'Menampilkan r18 doujin',
   execute(msg, args) {
@@ -65,5 +65,3 @@ const nh = {
     }
   },
 };
-
-export default nh;

@@ -1,4 +1,4 @@
-const woof = {
+module.exports = {
   name: 'k!woof',
   description: 'Menggongong...',
   execute(msg, args) {
@@ -9,5 +9,3 @@ const woof = {
     }
   },
 };
-
-export default woof;

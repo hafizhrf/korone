@@ -1,13 +1,12 @@
-import dotenv from 'dotenv'
-import express from 'express'
-import Discord from 'discord.js'
-import botCommands from './commands'
+require('dotenv').config();
+
+const Discord = require('discord.js');
+const botCommands = require('./commands');
 const bot = new Discord.Client();
-const app = express();
+var express = require('express');
+var app = express();
 
-dotenv.config()
 bot.commands = new Discord.Collection();
-
 Object.keys(botCommands).map(key => {
   bot.commands.set(botCommands[key].name, botCommands[key]);
 });
