@@ -21,28 +21,30 @@ bot.on('ready', () => {
 });
 
 bot.on('message', msg => {
-  const args = msg.content.split(/ +/);
-  const command = args.shift().toLowerCase();
+  if (!msg.author.bot) {
+    const args = msg.content.split(/ +/);
+    const command = args.shift().toLowerCase();
 
-  if(command == 'k!help'){
-    let fields = []
-    bot.commands.map((val) => {
-      fields.push({ name: "`"+val.name+"`", value: val.description })
-    })
-    const embed = new Discord.MessageEmbed()
-    .setColor('#0099ff')
-    .setTitle('Korone command list')
-    .addFields(fields)
-    return msg.channel.send(embed)
-  }
+    if(command == 'k!help'){
+      let fields = []
+      bot.commands.map((val) => {
+        fields.push({ name: "`"+val.name+"`", value: val.description })
+      })
+      const embed = new Discord.MessageEmbed()
+      .setColor('#0099ff')
+      .setTitle('Korone command list')
+      .addFields(fields)
+      return msg.channel.send(embed)
+    }
 
-  if (!bot.commands.has(command)) return;
+    if (!bot.commands.has(command)) return;
 
-  try {
-    bot.commands.get(command).execute(msg, args);
-  } catch (error) {
-    console.error(error);
-    msg.reply('there was an error trying to execute that command!');
+    try {
+      bot.commands.get(command).execute(msg, args);
+    } catch (error) {
+      console.error(error);
+      msg.reply('there was an error trying to execute that command!');
+    }
   }
 });
 
