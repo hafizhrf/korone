@@ -43,7 +43,7 @@ module.exports = {
   name: 'k!nh',
   description: 'Menampilkan r18 doujin',
   execute(msg, args) {
-    if(msg.channel.nsfw){
+    if(!msg.channel.nsfw){
       msg.channel.send('Command ini hanya bisa digunakan di NSFW Channel');
     }else{
       if(args.length < 1){
