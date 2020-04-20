@@ -18,7 +18,7 @@ module.exports = {
               text: "Copyright nhentai.net"
             },
             image: {
-              url: gallery.getCover()
+              url: gallery.images.cover.t
             },
             author: {
               name: gallery.title.english,
