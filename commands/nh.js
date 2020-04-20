@@ -34,17 +34,16 @@ module.exports = {
           }
           let tags = ''
           gallery.tags.map(res => {
-            tags += `${res.name},`
+            tags += `${res.name}, `
           })
           embed.fields.push({
             name: "Tags",
-            value: tags.slice(0,-1),
+            value: tags.slice(0,-2),
             inline: false
           })
           msg.channel.send({embed:embed})
         }).catch(err => {
           msg.channel.send('Doujin tidak ditemukan');
-          console.log(err);
         })
       }else{
         api.search(args.join(' ')).then(res => {
@@ -60,21 +59,27 @@ module.exports = {
               author: {
                 name: gallery.title.english,
                 url: `https://nhentai.net/g/${res.results[0].id}`,
-              }
+              },
+              fields: [
+                {
+                  name: 'Pages',
+                  value: gallery.num_pages,
+                  inline: false
+                }
+              ],
             }
             let tags = ''
             gallery.tags.map(res => {
-              tags += `${res.name},`
+              tags += `${res.name}, `
             })
             embed.fields.push({
               name: "Tags",
-              value: tags.slice(0,-1),
+              value: tags.slice(0,-2),
               inline: false
             })
             msg.channel.send({embed:embed})
           }).catch(err => {
             msg.channel.send('Doujin tidak ditemukan');
-            console.log(err);
           })
         }).catch(err => {
           msg.channel.send('Doujin tidak ditemukan');
