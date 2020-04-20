@@ -43,20 +43,24 @@ module.exports = {
   name: 'k!nh',
   description: 'Menampilkan r18 doujin',
   execute(msg, args) {
-    if(args.length < 1){
-      msg.channel.send('Silahkan tulis dojin yang diinginkan / ketik `k!nh random` untuk menampilkan random dojon');
+    if(msg.channel.nsfw){
+      msg.channel.send('Command ini hanya bisa digunakan di NSFW Channel');
     }else{
-      if (args.join(' ') === 'random') {
-        let id = Math.floor(Math.random() * 300000);
-        getDoujin(id, msg)
-      }else if (args.join(' ').length === 6 && !isNaN(args.join(' '))) {
-        getDoujin(args.join(' '), msg)
+      if(args.length < 1){
+        msg.channel.send('Silahkan tulis dojin yang diinginkan / ketik `k!nh random` untuk menampilkan random dojon');
       }else{
-        api.search(args.join(' ')).then(res => {
-          getDoujin(res.results[0].id, msg)
-        }).catch(err => {
-          msg.channel.send('Doujin tidak ditemukan');
-        })
+        if (args.join(' ') === 'random') {
+          let id = Math.floor(Math.random() * 300000);
+          getDoujin(id, msg)
+        }else if (args.join(' ').length === 6 && !isNaN(args.join(' '))) {
+          getDoujin(args.join(' '), msg)
+        }else{
+          api.search(args.join(' ')).then(res => {
+            getDoujin(res.results[0].id, msg)
+          }).catch(err => {
+            msg.channel.send('Doujin tidak ditemukan');
+          })
+        }
       }
     }
   },
