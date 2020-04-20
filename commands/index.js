@@ -8,5 +8,6 @@ module.exports = {
   Manga: require('./manga'),
   Vtuber: require('./vtuber'),
   Nh: require('./nh'),
+  Apod: require('./apod'),
   panjangtitid: require('./panjangtitit'),
 };
