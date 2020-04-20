@@ -2,7 +2,7 @@ require('dotenv').config();
 const { MessageEmbed } = require('discord.js');
 const nHentaiAPI = require('nhentai-api-js');
 let api = new nHentaiAPI();
-const getDoujin(id, msg){
+const getDoujin = (id, msg) => {
   api.g(id).then(gallery => {
     const embed = {
       color: 6101172,
