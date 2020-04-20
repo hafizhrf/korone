@@ -2,7 +2,9 @@
 A discord bot built with node.js... WOOF WOOF!
 
 ## Command Lists
- 
+
+###### `k!vtuber`
+Menampilkan data Virtual Youtuber
 ###### `k!woof`
 Menggongong...
 ###### `k!youtube`

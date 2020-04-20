@@ -34,6 +34,7 @@ bot.on('message', msg => {
     .addFields(fields)
     return msg.channel.send(embed)
   }
+
   if (!bot.commands.has(command)) return;
 
   try {
@@ -44,7 +45,7 @@ bot.on('message', msg => {
   }
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });

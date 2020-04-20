@@ -1,6 +1,7 @@
 require('dotenv').config();
 const axios = require('axios')
 const { MessageEmbed } = require('discord.js');
+const formatNumber = require('../helpers/numbering');
 
 module.exports = {
   name: 'k!manga',
@@ -9,8 +10,8 @@ module.exports = {
     if(args.length < 1){
       msg.channel.send('Silahkan tulis manga yang diinginkan');
     }else{
-      axios.get(`https://api.jikan.moe/v3/search/manga?q=${args.join(' ')}&limit=1`).then(res => {
-        // console.log(res);
+      const URL = encodeURI(`https://api.jikan.moe/v3/search/manga?q=${args.join(' ')}&limit=1`)
+      axios.get(URL).then(res => {
         if (res.data.results.length < 1) {
           msg.channel.send('Manga tidak ditemukan');
         }else{
@@ -24,7 +25,7 @@ module.exports = {
           .addField("Volumes", res.data.results[0].volumes, false)
           .addField("Chapters", res.data.results[0].chapters, false)
           .addField("Score", res.data.results[0].score, false)
-          .addField("Members", res.data.results[0].members, false)
+          .addField("Members", formatNumber(res.data.results[0].members), false)
           .addField("Publishing", res.data.results[0].publishing ? 'Yes' : 'No', false)
           msg.channel.send(embed)
         }

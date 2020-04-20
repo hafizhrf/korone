@@ -9,7 +9,8 @@ module.exports = {
     if(args.length < 1){
       msg.channel.send('Silahkan tulis channel youtube yang diinginkan');
     }else{
-      axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&order=relevance&q=${args.join(' ')}&type=channel&key=${process.env.YOUTUBE_TOKEN}`).then(response => {
+      const URL = encodeURI(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&order=relevance&q=${args.join(' ')}&type=channel&key=${process.env.YOUTUBE_TOKEN}`)
+      axios.get(URL).then(response => {
         if (response.data.items.length < 1) {
           msg.channel.send('Channel youtube tidak ditemukan');
         }else{

@@ -9,8 +9,8 @@ module.exports = {
     if(args.length < 1){
       msg.channel.send('Silahkan tulis nama Seiyuu yang diinginkan');
     }else{
-      axios.get(`https://api.jikan.moe/v3/search/person?q=${args.join(' ')}&limit=1`).then(res => {
-        // console.log(res);
+      const URL = encodeURI(`https://api.jikan.moe/v3/search/person?q=${args.join(' ')}&limit=1`)
+      axios.get(URL).then(res => {
         if (res.data.results.length < 1) {
           msg.channel.send('Seiyuu tidak ditemukan');
         }else{
