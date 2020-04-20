@@ -4,8 +4,8 @@
   "description": "A discord bot! Woof woof!",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "node_modules/.bin/nodemon index.js",
+    "start": "babel-node index.js",
+    "dev": "nodemon -i node_modules -x npm run start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,7 +20,11 @@
   },
   "homepage": "https://github.com/hafizhrf/korone-bot#readme",
   "dependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.5",
     "axios": "^0.19.2",
+    "babel": "^6.23.0",
     "discord.js": "^12.1.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",

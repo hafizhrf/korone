@@ -1,4 +1,4 @@
-module.exports = {
+const confess = {
   name: 'k!confess',
   description: 'Nembak...',
   execute(msg, args) {
@@ -9,3 +9,5 @@ module.exports = {
     }
   },
 };
+
+export default confess;

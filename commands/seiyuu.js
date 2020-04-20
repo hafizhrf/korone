@@ -2,7 +2,7 @@ require('dotenv').config();
 const axios = require('axios')
 const { MessageEmbed } = require('discord.js');
 
-module.exports = {
+const seiyuu = {
   name: 'k!seiyuu',
   description: 'Menampilkan Seiyuu',
   execute(msg, args) {
@@ -28,3 +28,5 @@ module.exports = {
     }
   },
 };
+
+export default seiyuu;

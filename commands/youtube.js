@@ -2,7 +2,8 @@ require('dotenv').config();
 const axios = require('axios')
 const { MessageEmbed } = require('discord.js');
 const formatNumber = require('../helpers/numbering');
-module.exports = {
+
+const youtube = {
   name: 'k!youtube',
   description: 'Menampilkan statistik channel youtube',
   execute(msg, args) {
@@ -34,3 +35,5 @@ module.exports = {
     }
   },
 };
+
+export default youtube;

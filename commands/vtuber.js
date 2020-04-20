@@ -3,7 +3,7 @@ const axios = require('axios')
 const { MessageEmbed } = require('discord.js');
 const formatNumber = require('../helpers/numbering');
 
-module.exports = {
+const vtuber = {
   name: 'k!vtuber',
   description: 'Menampilkan data dari Virtual Youtuber yang dipilih',
   execute(msg, args) {
@@ -80,3 +80,5 @@ module.exports = {
     }
   },
 };
+
+export default vtuber;
