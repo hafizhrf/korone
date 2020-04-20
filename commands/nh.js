@@ -43,6 +43,7 @@ module.exports = {
           })
           msg.channel.send({embed:embed})
         }).catch(err => {
+          console.log(err);
           msg.channel.send('Doujin tidak ditemukan');
         })
       }else if (args.join(' ').length === 6 && !isNaN(args.join(' '))) {
