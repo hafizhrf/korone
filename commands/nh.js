@@ -3,39 +3,42 @@ const { MessageEmbed } = require('discord.js');
 const nHentaiAPI = require('nhentai-api-js');
 let api = new nHentaiAPI();
 const getDoujin = (id, msg) => {
-  api.g(id).then(gallery => {
-    const embed = {
-      color: 6101172,
-      footer: {
-        text: "Copyright nhentai.net"
-      },
-      image: {
-        url: gallery.getCover()
-      },
-      author: {
-        name: gallery.title.english,
-        url: `https://nhentai.net/g/${gallery.id}`,
-      },
-      fields: [
-        {
-          name: 'Pages',
-          value: gallery.num_pages,
-          inline: false
-        }
-      ],
-    }
-    let tags = ''
-    gallery.tags.map(res => {
-      tags += `${res.name}, `
+  msg.channel.send('Tunggu ya, aku lagi nyari dojinnya www~').then(message => {
+    api.g(id).then(gallery => {
+      const embed = {
+        color: 6101172,
+        footer: {
+          text: "Copyright nhentai.net"
+        },
+        image: {
+          url: gallery.getCover()
+        },
+        author: {
+          name: gallery.title.english,
+          url: `https://nhentai.net/g/${gallery.id}`,
+        },
+        fields: [
+          {
+            name: 'Pages',
+            value: gallery.num_pages,
+            inline: false
+          }
+        ],
+      }
+      let tags = ''
+      gallery.tags.map(res => {
+        tags += `${res.name}, `
+      })
+      embed.fields.push({
+        name: "Tags",
+        value: tags.slice(0,-2),
+        inline: false
+      })
+      message.edit('Ini dia dojinnya UwU');
+      msg.channel.send({embed:embed})
+    }).catch(err => {
+      message.edit('Doujin r18 tidak ditemukan');
     })
-    embed.fields.push({
-      name: "Tags",
-      value: tags.slice(0,-2),
-      inline: false
-    })
-    msg.channel.send({embed:embed})
-  }).catch(err => {
-    msg.channel.send('Doujin r18 tidak ditemukan');
   })
 }
 

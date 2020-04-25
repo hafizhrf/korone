@@ -1,5 +1,6 @@
 
 module.exports = {
+  Korone: require('./korone'),
   Woof: require('./woof'),
   Youtube: require('./youtube'),
   Confess: require('./confess'),
@@ -8,6 +9,7 @@ module.exports = {
   Manga: require('./manga'),
   Vtuber: require('./vtuber'),
   Nh: require('./nh'),
+  Whatanime: require('./whatanime'),
   Apod: require('./apod'),
   panjangtitid: require('./panjangtitit'),
 };

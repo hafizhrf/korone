@@ -25,6 +25,7 @@
     "discord.js": "^12.1.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "moment": "^2.24.0",
     "nhentai-api-js": "^1.1.2",
     "nodewikiaapi": "^2.0.3",
     "request": "^2.88.2"

@@ -2,6 +2,9 @@ module.exports = {
   name: 'k!panjangtitid',
   description: 'Mengukur titid...',
   execute(msg, args) {
+    if(!msg.channel.nsfw){
+      return msg.channel.send('Command ini hanya bisa digunakan di NSFW Channel');
+    }
     let id = Math.floor(Math.random() * 100);
     if(args.length < 1){
       if(id > 80){

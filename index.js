@@ -17,7 +17,7 @@ bot.login(TOKEN);
 
 bot.on('ready', () => {
   console.info(`Logged in as ${bot.user.tag}!`);
-  bot.user.setStatus('Playing game with Risu')
+  bot.user.setActivity('with Okayu :3')
 });
 
 bot.on('message', msg => {
