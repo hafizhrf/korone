@@ -17,3 +17,11 @@ Menampilkan statistik anime
 Menampilkan Seiyuu
 ###### `k!manga`
 Menampilkan statistik manga
+###### `k!korone`
+Menampilkan random Korochan gif
+###### `k!apod`
+Menampilkan Astronomy Pictore Of the Day hari ini / sesuai tanggal lahir kamu
+###### `k!nh`
+Menampilkan R18 Doujinshi
+
+## And many more!
