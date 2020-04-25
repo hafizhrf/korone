@@ -13,6 +13,8 @@ Menampilkan statistik channel youtube
 Nembak...
 ###### `k!anime`
 Menampilkan statistik anime
+###### `k!whatanime`
+Mencarikan Judul dari gambar anime yang dikirim
 ###### `k!seiyuu`
 Menampilkan Seiyuu
 ###### `k!manga`
