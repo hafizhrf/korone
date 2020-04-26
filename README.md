@@ -1,7 +1,7 @@
 # korone-bot
 A discord bot built with node.js... WOOF WOOF!
 
-[Invite Me to your server!](https://github.com/joemccann/dillinger/blob/master/KUBERNETES.md)
+[Invite Me to your server!](https://discordapp.com/oauth2/authorize?client_id=700182848862158869&permissions=1745353808&scope=bot)
 
 Note : bot ini gak 24jam nyala, cuma buat seru2an aja
 
