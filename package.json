@@ -21,7 +21,7 @@
   "homepage": "https://github.com/hafizhrf/korone-bot#readme",
   "dependencies": {
     "@babel/core": "^7.9.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "discord.js": "^12.1.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
