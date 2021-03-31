@@ -1,0 +1,87 @@
+{
+  "699564141748420658": {
+    "users": {
+      "159985870458322944": {
+        "id": "159985870458322944",
+        "bot": true,
+        "username": "MEE6",
+        "discriminator": "4876",
+        "avatar": "b50adff099924dd5e6b72d13f77eb9d7",
+        "lastMessageChannelID": null,
+        "createdTimestamp": 1458214003911,
+        "defaultAvatarURL": "https://cdn.discordapp.com/embed/avatars/1.png",
+        "tag": "MEE6#4876",
+        "avatarURL": "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp",
+        "displayAvatarURL": "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp"
+      },
+      "700182848862158869": {
+        "id": "700182848862158869",
+        "bot": true,
+        "username": "Korone",
+        "discriminator": "1739",
+        "avatar": "f2a8f99aa703c266c07427de84d11b5e",
+        "lastMessageChannelID": null,
+        "verified": true,
+        "mfaEnabled": false,
+        "createdTimestamp": 1587006999937,
+        "defaultAvatarURL": "https://cdn.discordapp.com/embed/avatars/4.png",
+        "tag": "Korone#1739",
+        "avatarURL": "https://cdn.discordapp.com/avatars/700182848862158869/f2a8f99aa703c266c07427de84d11b5e.webp",
+        "displayAvatarURL": "https://cdn.discordapp.com/avatars/700182848862158869/f2a8f99aa703c266c07427de84d11b5e.webp"
+      },
+      "392715349088272384": {
+        "id": "392715349088272384",
+        "bot": false,
+        "username": "kanamori",
+        "discriminator": "0970",
+        "avatar": "b23fffe0a87229c3f956fe19db804cc1",
+        "lastMessageChannelID": "699564141748420658",
+        "createdTimestamp": 1513701035521,
+        "defaultAvatarURL": "https://cdn.discordapp.com/embed/avatars/0.png",
+        "tag": "kanamori#0970",
+        "avatarURL": "https://cdn.discordapp.com/avatars/392715349088272384/b23fffe0a87229c3f956fe19db804cc1.webp",
+        "displayAvatarURL": "https://cdn.discordapp.com/avatars/392715349088272384/b23fffe0a87229c3f956fe19db804cc1.webp"
+      },
+      "406747342318993409": {
+        "id": "406747342318993409",
+        "bot": false,
+        "username": "shiori",
+        "discriminator": "8600",
+        "avatar": "fac6e74f85145eadc1532c0244918b79",
+        "lastMessageChannelID": null,
+        "createdTimestamp": 1517046523409,
+        "defaultAvatarURL": "https://cdn.discordapp.com/embed/avatars/0.png",
+        "tag": "shiori#8600",
+        "avatarURL": "https://cdn.discordapp.com/avatars/406747342318993409/fac6e74f85145eadc1532c0244918b79.webp",
+        "displayAvatarURL": "https://cdn.discordapp.com/avatars/406747342318993409/fac6e74f85145eadc1532c0244918b79.webp"
+      },
+      "487921794481651724": {
+        "id": "487921794481651724",
+        "bot": false,
+        "username": "RandyWardhana",
+        "discriminator": "2288",
+        "avatar": "a4150afa96d8d9c349db58d6bc1cc0b0",
+        "lastMessageChannelID": null,
+        "createdTimestamp": 1536400020953,
+        "defaultAvatarURL": "https://cdn.discordapp.com/embed/avatars/3.png",
+        "tag": "RandyWardhana#2288",
+        "avatarURL": "https://cdn.discordapp.com/avatars/487921794481651724/a4150afa96d8d9c349db58d6bc1cc0b0.webp",
+        "displayAvatarURL": "https://cdn.discordapp.com/avatars/487921794481651724/a4150afa96d8d9c349db58d6bc1cc0b0.webp"
+      },
+      "700094628937859082": {
+        "id": "700094628937859082",
+        "bot": true,
+        "username": "Pandy",
+        "discriminator": "1449",
+        "avatar": "154487770aab136057274d5488e51c26",
+        "lastMessageChannelID": null,
+        "createdTimestamp": 1586985966668,
+        "defaultAvatarURL": "https://cdn.discordapp.com/embed/avatars/4.png",
+        "tag": "Pandy#1449",
+        "avatarURL": "https://cdn.discordapp.com/avatars/700094628937859082/154487770aab136057274d5488e51c26.webp",
+        "displayAvatarURL": "https://cdn.discordapp.com/avatars/700094628937859082/154487770aab136057274d5488e51c26.webp"
+      }
+    },
+    "isActive": true
+  }
+}

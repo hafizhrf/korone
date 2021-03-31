@@ -1,5 +1,5 @@
 require('dotenv').config();
-
+const editJsonFile = require("edit-json-file");
 const Discord = require('discord.js');
 const botCommands = require('./commands');
 const bot = new Discord.Client();
@@ -25,15 +25,18 @@ bot.on('message', msg => {
     const args = msg.content.split(/ +/);
     const command = args.shift().toLowerCase();
 
-    if(command == 'k!help'){
+    if (command == 'k!help') {
       let fields = []
       bot.commands.map((val) => {
-        fields.push({ name: "`"+val.name+"`", value: val.description })
+        fields.push({
+          name: "`" + val.name + "`",
+          value: val.description+'\n'
+        })
       })
       const embed = new Discord.MessageEmbed()
-      .setColor('#0099ff')
-      .setTitle('Korone command list')
-      .addFields(fields)
+        .setColor('#0099ff')
+        .setTitle('Korone command list')
+        .addFields(fields)
       return msg.channel.send(embed)
     }
 
@@ -48,7 +51,11 @@ bot.on('message', msg => {
   }
 });
 
+//testing
+
+//
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
+  console.log(`Our app is running on port ${ PORT }`);
 });

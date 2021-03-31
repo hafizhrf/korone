@@ -12,4 +12,10 @@ module.exports = {
   Whatanime: require('./whatanime'),
   Apod: require('./apod'),
   panjangtitid: require('./panjangtitit'),
+  adutitid: require('./adutitid'),
+  ngocok: require('./ngocok'),
+  janken: require('./janken'),
+  args: require('./args'),
+  // stopbattle: require('./stopbattle'),
+  // battleroyale: require('./battleroyale'),
 };

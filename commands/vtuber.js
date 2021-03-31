@@ -8,11 +8,8 @@ module.exports = {
   description: 'Menampilkan data dari Virtual Youtuber yang dipilih',
   execute(msg, args) {
     let fields = [
-      'Trivia',
-      'Personality',
       'Background',
-      'Mascot',
-      'History'
+      'Personality'
     ]
     if(args.length < 1){
       msg.channel.send('Silahkan tulis channel vtuber yang diinginkan');
@@ -29,11 +26,6 @@ module.exports = {
                   name: res.data.sections[0].title,
                 },
                 fields: [
-                  {
-                    name: 'Description',
-                    value: res.data.sections[0].content[0].text,
-                    inline: false
-                  }
                 ],
                 color: 3122943,
                 footer: {
