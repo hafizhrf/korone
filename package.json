@@ -28,7 +28,7 @@
     "express": "^4.17.1",
     "lodash": "^4.17.21",
     "meme-maker": "^2.1.2",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "nhentai-api-js": "^1.1.2",
     "nodewikiaapi": "^2.0.3",
     "querystring": "^0.2.0",
